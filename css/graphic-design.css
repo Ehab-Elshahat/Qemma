@@ -79,16 +79,21 @@
    height: 500px;
    overflow: hidden;
    position: relative;
-   transition: all .3s ease-in-out;
-   -webkit-transition: all .3s ease-in-out;
-   -moz-transition: all .3s ease-in-out;
-   -ms-transition: all .3s ease-in-out;
-   -o-transition: all .3s ease-in-out;
+   transition: var(--mainTransitionTim);
+   -webkit-transition: var(--mainTransitionTim);
+   -moz-transition: var(--mainTransitionTim);
+   -ms-transition: var(--mainTransitionTim);
+   -o-transition: var(--mainTransitionTim);
    transform: scale(.9);
    -webkit-transform: scale(.9);
    -moz-transform: scale(.9);
    -ms-transform: scale(.9);
    -o-transform: scale(.9);
+   border-radius: 7px;
+   -webkit-border-radius: 7px;
+   -moz-border-radius: 7px;
+   -ms-border-radius: 7px;
+   -o-border-radius: 7px;
 }
 .main-graphic-design .box-imag img {
 
@@ -97,36 +102,47 @@
 }
 .main-graphic-design .box-imag .overlay {
   position: absolute;
-  bottom: -50px;
-  left: 0;
-  padding: 20px;
-  width: 50%;
-  height: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  width: 500px;
+  height: 500px;
+  bottom: -100%;
+  left: -100%;
+  padding: 10px;
+  background-image: url("../assets/graphic-design-page/overlay-bg.svg") ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(0 113 188 / 80%);
   color: #fff;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
-  transition: all .6s ease-in-out;
-  -webkit-transition: all .6s ease-in-out;
-  -moz-transition: all .6s ease-in-out;
-  -ms-transition: all .6s ease-in-out;
-  -o-transition: all .6s ease-in-out;
+  border-radius: 50% ;
+  -webkit-border-radius: 50% ;
+  -moz-border-radius: 50% ;
+  -ms-border-radius: 50% ;
+  -o-border-radius: 50% ;
+  transition: var(--mainTransitionTim) ;
+  -webkit-transition: var(--mainTransitionTim) ;
+  -moz-transition: var(--mainTransitionTim) ;
+  -ms-transition: var(--mainTransitionTim) ;
+  -o-transition: var(--mainTransitionTim) ;
 }
 .main-graphic-design .box-imag .overlay h3 {
-  font-size: 30px;
-  margin-bottom: 20px;
+
+  text-align: center;
+  font-size: 20px;
+  margin: 70px  auto 25px ;
   font-weight: bold;
+  overflow: hidden;
 }
 .main-graphic-design .box-imag .overlay p {
 
-
+overflow: hidden;
   line-height: 2;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 11px;
+  width: 270px;
+  margin-left: auto;
+  margin-right: 85px;
+  text-align: right;
 }
 .main-graphic-design .box-imag:hover {
   transform: scale(1);
@@ -136,8 +152,9 @@
   -o-transform: scale(1);
 }
 .main-graphic-design .box-imag:hover .overlay{
-  bottom: 0;
-  height: 100%;
+  bottom: -120px;
+  left: -120px;
+  
 }
 
 @media(max-width:767px) {
